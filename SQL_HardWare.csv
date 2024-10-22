@@ -1,0 +1,22 @@
+HardwareID,HardwareType,ErntecPartNo,Description,Supplier,MU,UnitTotalCost,UnitPurchaseCost,ErntecOperationalCost,AnySetupCost,Comments,StartDate,EndDate,Timestamp,MPN,Linkedto,UnitSell,ApplicableDoorType
+1,Additional Hardware,N/A,No Additional HW Required,N/A,1.7,0,0,0,0,No Additional HW required,00:00.0,00:00.0,02:57.8,NULL,NULL,0,NULL
+2,Additional Hardware,3542437,"Closer, Door, 726 Series, Silver, LW726SIL",Lockwood,1.7,584.52,483.55,50.97,50,Surface mounted,00:00.0,00:00.0,02:57.8,NULL,NULL,993.684,Both
+3,Exterior handles,N/A,None Required,N/A,1.7,0,0,0,0,,00:00.0,00:00.0,02:57.8,NULL,NULL,0,NULL
+4,Exterior handles,TBD,"Exterior Plate, Cylinder & Fixed Lever, Satin Chrome,1809/70SC",Lockwood,1.7,141.6,134.1,7.5,0,Need new Erntec P/N,00:00.0,00:00.0,02:57.8,NULL,NULL,240.72,Standard
+5,Exterior handles,TBD,"FS Exterior Plate, Cylinder & Fixed Lever, Satin Chrome,1809/70SC",Lockwood,1.7,161.6,134.1,7.5,20,"Need new Erntec P/N , Add $20 for extrended screw + spindle",00:00.0,00:00.0,02:57.8,NULL,NULL,274.72,Fully Sealed
+6,Exterior handles,TBD,"Exterior Plate & Lever, Satin Chrome,1805/70SC",Lockwood,1.7,107.4,99.9,7.5,0,Need new Erntec P/N,00:00.0,00:00.0,02:57.8,NULL,NULL,182.58,Standard
+7,Exterior handles,TBD,"FS Exterior Plate & Lever, Satin Chrome,1805/70SC",Lockwood,1.7,127.4,99.9,7.5,20,"Need new Erntec P/N , Add $20 for extrended screw + spindle",00:00.0,00:00.0,02:57.8,NULL,NULL,216.58,Fully Sealed
+8,Exterior handles,TBD,"Exterior Plate, Cylinder & Lever, Satin Chrome,1801/70SC + C4 570 Oval Cylinder + CAM 5KD",Lockwood,1.7,172,164.5,7.5,0,"Need new Erntec P/N , Get cost",00:00.0,00:00.0,02:57.8,NULL,NULL,292.4,Standard
+9,Exterior handles,TBD,"Exterior Plate, Cylinder & Lever, Satin Chrome,1801/70SC + C4 570 Oval Cylinder + CAM5KD + Extension",Lockwood,1.7,192,184.5,7.5,0,"Need new Erntec P/N , Get cost (added $20 for extension)",00:00.0,00:00.0,02:57.8,NULL,NULL,326.4,Fully Sealed
+10,Interior handles,TBD,"Interior Plate & Lever, Satin Chrome, 1905/70SC",Lockwood,1.7,113.7,106.2,7.5,0,Need new Erntec P/N,00:00.0,00:00.0,02:57.8,NULL,NULL,193.29,Both
+11,Interior handles,TBD,"Interior Plate, Turnknob & Lever, Satin Chrome, 1904/70SC + TURNSNIB ADAPTOR",Lockwood,1.7,278.2,270.7,7.5,0,"Need new Erntec P/N, For Fully Sealed Door combine 1904/70SC + 3772",00:00.0,00:00.0,02:57.8,NULL,NULL,472.94,Both
+12,Interior handles,3540382,"Lock, Panic Bar, FLUID Exit Mortice Lock Device, 900mm, LWFE109-0MSIL",Lockwood,1.7,1207.5,1147.5,40,20,Get pricing without mortice for update,00:00.0,00:00.0,02:57.8,NULL,NULL,2052.75,Both
+13,Interior handles,3540383,"Lock, Panic Bar, FLUID Exit Mortice Lock Device, 1200mm,  LWFE112-0MSIL",Lockwood,1.7,1292.5,1232.5,40,20,Get pricing without mortice for update - can we make do with one (larger) size as we always cut to size,00:00.0,00:00.0,02:57.8,NULL,NULL,2197.25,Both
+14,Latch,TBD,Standard Erntec Latch,Erntec,1.7,41,33,8,0,No block required for standard thickness door,00:00.0,00:00.0,02:57.8,NULL,NULL,69.7,Standard
+15,Latch,TBD,Standard Erntec Latch FS,Erntec,1.7,41,33,8,0,"Need new Erntec P/N , Block required for full seal use 3540605 (853-471)",00:00.0,00:00.0,02:57.8,NULL,NULL,69.7,Fully Sealed
+16,Latch,3540751,"Striker, Electric, 12-30Vdc, 25Kg Pre-Load, Multi-Function, No-Lip",Lockwood,1.7,987.89,505.75,420.14,62,Must include block latch 3541285 (853-541) for standard thickness / 3542156 (8530555) for full seal,00:00.0,00:00.0,02:57.8,NULL,NULL,1679.413,Both
+17,Machine Block,N/A,No Block Required,N/A,1.7,0,0,0,0,NO Block for standard thickness door and standard erntec latch,00:00.0,00:00.0,02:57.8,NULL,NULL,0,NULL
+18,Machine Block,3541285,"Block, Electric Latch, Machined, Dwg 853-541",Erntec,1.7,627.5,627.5,0,0,Block for standard thickness door with the Electric strike latch,00:00.0,00:00.0,02:57.8,NULL,NULL,1066.75,Standard
+19,Machine Block,3540605,"Block, Standard Latch FS, Machined, Dwg 853-471",Erntec,1.7,484.5,484.5,0,0,Block full seal door with Standard erntec latch,00:00.0,00:00.0,02:57.8,NULL,NULL,823.65,Fully Sealed
+20,Machine Block,3542156,"Block, Electric Latch FS, Machined, Dwg 853-555",Erntec,1.7,957.5,957.5,0,0,Block full sealed door with the Electric strike latch,00:00.0,00:00.0,02:57.8,NULL,NULL,1627.75,Fully Sealed
+21,Mortice Locks,TBD,"Universal Mortice Lock, 3772TSC",Lockwood,1.7,212.27,164.5,22.77,25,Add select logic to form,00:00.0,00:00.0,02:57.8,NULL,NULL,360.859,Both
