@@ -38,6 +38,17 @@ mandatory_flags = {}
 # currently hard-coded because there are no 'mandatory' labels in dataset
 mandatory_categories = ["Mortice", "Interior Plate/Handle", "Latch Plate", "Custom Latch Block"]
 
+latch_to_latch_block = {
+    "Standard": {
+        "Standard Erntec Latch": "No Block Required",
+        "Striker, Electric, 12-30Vdc, 25Kg Pre-Load, Multi-Function, No-Lip": "Block, Electric Latch, Machined, Dwg 853-541"
+    },
+    "Fully Sealed": {
+        "Standard Erntec Latch FS": "Block, Standard Latch FS, Machined, Dwg 853-471",
+        "Striker, Electric, 12-30Vdc, 25Kg Pre-Load, Multi-Function, No-Lip": "Block, Electric Latch FS, Machined, Dwg 853-555"
+    }
+}
+
 ### need review!!
 if door_type in door_prices[door_size]:
     # Retrieve filtered dataset based on door type
@@ -49,25 +60,37 @@ if door_type in door_prices[door_size]:
     ordered_categories = [
     "Mortice",
     "Latch Plate",
-    "Custom Latch Block",
     "Exterior Plate/Handle (Optional)",
     "Interior Plate/Handle",
     "Additional Hardware (Optional)"
     ]
 
-    show_custom_latch_block = True
+    selected_latch = None
 
     for category in ordered_categories:
         if category not in HW_prices:
             continue
-        # based on 'Latch Plate', skip displaying CLB when 'standard erntec latch' is selected
-        if category == "Custom Latch Block" and not show_custom_latch_block:
-            continue
+
         # create selection box for each category
         selected_item = st.selectbox(f"Select {category}:", list(HW_prices[category].keys()))
-        # turn off the CLB flag based on the condition
-        if category == "Latch Plate" and selected_item == "Standard Erntec Latch":
-            show_custom_latch_block = False
+
+        if category == "Latch Plate":
+            selected_latch = selected_item
+
+            if selected_latch in latch_to_latch_block[door_type]:
+                # Get the paired latch block based on the door type
+                paired_block = latch_to_latch_block[door_type][selected_latch]
+                
+                # Create a selection box but only show the paired block as the sole option
+                st.selectbox("Paired Latch Block:", [paired_block])
+                
+                # Update price for the corresponding latch block
+                if paired_block != "None Required" and paired_block in HW_prices["Custom Latch Block"]:
+                    price_str = HW_prices["Custom Latch Block"][paired_block]
+                    price = float(price_str)
+                    total_price += price
+                    # st.write(f"Price for {paired_block}: ${price:.2f}")
+
         # update mandatory field flag
         if category in mandatory_categories:
             mandatory_flags[category] = selected_item != "Select an option..."
@@ -78,6 +101,8 @@ if door_type in door_prices[door_size]:
             price = float(price_str)
             total_price += price
             #st.write(f"Price for {selected_item}: ${price:.2f}")
+    
+    
 
 st.divider()
 # check flag
