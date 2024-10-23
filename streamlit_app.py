@@ -86,8 +86,7 @@ if door_type in door_prices[door_size]:
                 
                 # Update price for the corresponding latch block
                 if paired_block != "None Required" and paired_block in HW_prices["Custom Latch Block"]:
-                    price_str = HW_prices["Custom Latch Block"][paired_block]
-                    price = float(price_str)
+                    price = HW_prices["Custom Latch Block"][paired_block]
                     total_price += price
                     # st.write(f"Price for {paired_block}: ${price:.2f}")
 
@@ -97,8 +96,7 @@ if door_type in door_prices[door_size]:
         # append price
         if selected_item != "Select an option..." and HW_prices[category][selected_item] is not None:
             # price_str = HW_prices[category][selected_item].strip().replace('$', '').replace(',', '')
-            price_str = HW_prices[category][selected_item]
-            price = float(price_str)
+            price = HW_prices[category][selected_item]
             total_price += price
             #st.write(f"Price for {selected_item}: ${price:.2f}")
     
