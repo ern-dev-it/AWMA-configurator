@@ -72,9 +72,6 @@ def getHWPrice(df, door_type):
             'price': price,
             'id': item_id
         }
-
-        for hardwareType in HW_prices_dict:
-            HW_prices_dict[hardwareType] = {"Select an option...": None, **HW_prices_dict[hardwareType]}
     
     return HW_prices_dict
 
