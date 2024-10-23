@@ -8,14 +8,14 @@ def convert_currency(value):
 
 def cleanBasePriceData(df):
     df.columns = df.columns.str.strip()
-    df = df.drop(["DoorSizeID", "Description",
-                  "DateEntered","Height","Width","Thickness"], axis=1)
+    df = df.loc[:,["DoorSizeID", "Size",
+                  "UnitSellToAWMA","ThicknessType"]]
     #df['amount'] = df['UnitSellToAWMA'].apply(convert_currency)
     return df
 
 def cleanHWPriceData(df):
     df.columns = df.columns.str.strip()
-    df = df.loc[:,["ApplicableDoorType", "HardwareType",
+    df = df.loc[:,["HardwareID","ApplicableDoorType", "HardwareType",
                   "Description","UnitSell"]]
     #df['amount'] = df['Unit Sell'].apply(convert_currency)
     
