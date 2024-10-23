@@ -32,41 +32,51 @@ def cleanHWPriceData(df):
 
 def getBasePrice(df):
     df = cleanBasePriceData(df)
-    door_prices = {}
+
+    base_price_dict = {}
     for index, row in df.iterrows():
         size = row['Size']
-        price = row['UnitSellToAWMA']
         door_type = row['ThicknessType']
+        price = row['UnitSellToAWMA']
+        item_id = row['DoorSizeID']
         
-        if size not in door_prices:
-            door_prices[size] = {}  # Initialize nested dictionary
-        
-        door_prices[size][door_type] = price
+        if size not in base_price_dict:
+            base_price_dict[size] = {}
 
-    return door_prices
+        base_price_dict[size][door_type] = {
+            'price': price,
+            'id': item_id
+        }
+    
+    return base_price_dict
 
-def getHWPrice(df, type):
+def getHWPrice(df, door_type):
     df = cleanHWPriceData(df)
-    if type == "Standard": # if standard
+    if door_type == "Standard": # if standard
         df_filtered = df.drop(df[df["ApplicableDoorType"] == "Fully Sealed"].index)
     else: # if fully sealed
         df_filtered = df.drop(df[df["ApplicableDoorType"] == "Standard"].index)
 
-    HW_prices = {}
-    for index, row in df_filtered.iterrows():
-        hardwareType = row['HardwareType']
-        price = row['UnitSell']
-        desc = row['Description']
-        
-        if hardwareType not in HW_prices:
-            HW_prices[hardwareType] = {}
-
-        HW_prices[hardwareType][desc] = price
-        
-        for hardwareType in HW_prices:
-            HW_prices[hardwareType] = {"Select an option...": None, **HW_prices[hardwareType]}
+    HW_prices_dict = {}
     
-    return HW_prices
+    for index, row in df_filtered.iterrows():
+        hardware_type = row['HardwareType']
+        description = row['Description']
+        price = row['UnitSell']
+        item_id = row['HardwareID']
+
+        if hardware_type not in HW_prices_dict:
+            HW_prices_dict[hardware_type] = {}
+        
+        HW_prices_dict[hardware_type][description] = {
+            'price': price,
+            'id': item_id
+        }
+
+        for hardwareType in HW_prices_dict:
+            HW_prices_dict[hardwareType] = {"Select an option...": None, **HW_prices_dict[hardwareType]}
+    
+    return HW_prices_dict
 
 '''
 test = getBasePrice(df)

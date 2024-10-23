@@ -54,7 +54,7 @@ if door_type in door_prices[door_size]:
     # Retrieve filtered dataset based on door type
     HW_prices = getHWPrice(df1, door_type)
     # total_price = float(doorprice.replace('$', '').replace(',', '').strip())
-    total_price = doorprice
+    total_price = doorprice['price']
 
     # Put categories into orders, matching the order in macros
     ordered_categories = [
@@ -87,7 +87,7 @@ if door_type in door_prices[door_size]:
                 # Update price for the corresponding latch block
                 if paired_block != "None Required" and paired_block in HW_prices["Custom Latch Block"]:
                     price = HW_prices["Custom Latch Block"][paired_block]
-                    total_price += price
+                    total_price += price['price']
                     # st.write(f"Price for {paired_block}: ${price:.2f}")
 
         # update mandatory field flag
@@ -97,7 +97,7 @@ if door_type in door_prices[door_size]:
         if selected_item != "Select an option..." and HW_prices[category][selected_item] is not None:
             # price_str = HW_prices[category][selected_item].strip().replace('$', '').replace(',', '')
             price = HW_prices[category][selected_item]
-            total_price += price
+            total_price += price['price']
             #st.write(f"Price for {selected_item}: ${price:.2f}")
     
     
