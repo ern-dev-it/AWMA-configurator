@@ -75,7 +75,8 @@ if door_type in door_prices[door_size]:
             continue
 
         # create selection box for each category
-        selected_item = st.selectbox(f"Select {category}:", list(HW_prices[category].keys()))
+        selected_item = st.selectbox(f"Select {category}:", list(HW_prices[category].keys()), index = None,
+                                     placeholder="Select an option...")
 
         if category == "Latch Plate":
             selected_latch = selected_item
@@ -89,17 +90,23 @@ if door_type in door_prices[door_size]:
                 
                 # Update price for the corresponding latch block
                 if paired_block != "None Required" and paired_block in HW_prices["Custom Latch Block"]:
-                    price = HW_prices["Custom Latch Block"][paired_block]
+                    category_dict = HW_prices.get(category, {})
+                    price = category_dict.get(selected_item, 0)
+                    #price = HW_prices["Custom Latch Block"][paired_block]
                     total_price += price['price']
                     # st.write(f"Price for {paired_block}: ${price:.2f}")
 
         # update mandatory field flag
         if category in mandatory_categories:
-            mandatory_flags[category] = selected_item != "Select an option..."
+            category_dict = HW_prices.get(category, {})
+            price = category_dict.get(selected_item, 0)
+            mandatory_flags[category] = price != 0
         # append price
-        if selected_item != "Select an option..." and HW_prices[category][selected_item] is not None:
+        if selected_item != None:
             # price_str = HW_prices[category][selected_item].strip().replace('$', '').replace(',', '')
-            price = HW_prices[category][selected_item]
+            category_dict = HW_prices.get(category, {})
+            price = category_dict.get(selected_item, 0)
+            #price = HW_prices[category][selected_item]
             total_price += price['price']
             #st.write(f"Price for {selected_item}: ${price:.2f}")
     
