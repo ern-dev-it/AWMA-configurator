@@ -83,10 +83,16 @@ if door_type in door_prices[door_size]:
                 st.selectbox("Paired Latch Block:", [paired_block])
                 
                 # Update price for the corresponding latch block
-                if paired_block != "None Required" and paired_block in HW_prices["Custom Latch Block"]:
-                    category_dict = HW_prices.get(category, {})
-                    price = category_dict.get(selected_item, 0)
-                    total_price += price['price']
+                
+                latch_data = HW_prices["Latch Plate"].get(selected_latch, None)
+                if latch_data:
+                    st.write(f"Price for {selected_latch}: ${latch_data['price']:.2f}")
+                    total_price += latch_data['price']
+                block_data = HW_prices["Custom Latch Block"].get(paired_block, None)
+                if block_data:
+                    st.write(f"Price for {paired_block}: ${block_data['price']:.2f}")
+                    total_price += block_data['price']
+
 
         # update mandatory field flag
         if category in mandatory_categories:
@@ -98,6 +104,7 @@ if door_type in door_prices[door_size]:
             category_dict = HW_prices.get(category, {})
             price = category_dict.get(selected_item, 0)
             total_price += price['price']
+            st.write(f"Price for {selected_item}: ${price['price']:.2f}")
     
     
 
