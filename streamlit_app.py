@@ -25,7 +25,7 @@ with col2:
 
 doorprice = door_prices[door_size][door_type]
 
-st.write(f"Price for {door_type} door in {door_size}: ${doorprice['price']:.2f}")
+#st.write(f"Price for {door_type} door in {door_size}: ${doorprice['price']:.2f}")
 
 st.divider()
 
@@ -90,7 +90,7 @@ if door_type in door_prices[door_size]:
 
                 block_data = HW_prices["Custom Latch Block"].get(paired_block, None)
                 if block_data:
-                    st.write(f"Price for {paired_block}: ${block_data['price']:.2f}")
+                    #st.write(f"Price for {paired_block}: ${block_data['price']:.2f}")
                     total_price += block_data['price']
 
 
@@ -104,7 +104,7 @@ if door_type in door_prices[door_size]:
             category_dict = HW_prices.get(category, {})
             price = category_dict.get(selected_item, 0)
             total_price += price['price']
-            st.write(f"Price for {selected_item}: ${price['price']:.2f}")
+            #st.write(f"Price for {selected_item}: ${price['price']:.2f}")
     
     
 
