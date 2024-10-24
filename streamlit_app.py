@@ -85,9 +85,7 @@ if door_type in door_prices[door_size]:
                 # Update price for the corresponding latch block
                 
                 latch_data = HW_prices["Latch Plate"].get(selected_latch, None)
-                if latch_data:
-                    st.write(f"Price for {selected_latch}: ${latch_data['price']:.2f}")
-                    total_price += latch_data['price']
+
                 block_data = HW_prices["Custom Latch Block"].get(paired_block, None)
                 if block_data:
                     st.write(f"Price for {paired_block}: ${block_data['price']:.2f}")
