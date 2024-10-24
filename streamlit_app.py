@@ -104,7 +104,7 @@ if door_type in door_prices[door_size]:
             category_dict = HW_prices.get(category, {})
             price = category_dict.get(selected_item, 0)
             total_price += price['price']
-            #st.write(f"Price for {selected_item}: ${price['price']:.2f}")
+            #st.write(f"Price for {selected_item}: ${price['price']:.3f}")
     
     
 
@@ -113,7 +113,7 @@ st.divider()
 all_mandatory_filled = all(mandatory_flags.values())
 
 if all_mandatory_filled:
-    st.write(f"### Total Price: ${total_price:.2f}")
+    st.write(f"### Total Price: ${total_price:.3f}")
 else:
     st.write("### Please complete all mandatory selections to see the total price.")
 
