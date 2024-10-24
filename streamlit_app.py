@@ -3,6 +3,11 @@ import streamlit as st
 
 from data_processing import getBasePrice, getHWPrice
 
+st.set_page_config(
+    page_title="AWMA configurator",
+    page_icon="🖥️"
+)
+
 logo_png = "Erntec_Pos_RGB.png"
 
 with st.columns(3)[1]:
