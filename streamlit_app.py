@@ -4,7 +4,6 @@ import streamlit as st
 from data_processing import getBasePrice, getHWPrice
 
 logo_png = "Erntec_Pos_RGB.png"
-# st.logo(logo_png, size = "large")
 
 with st.columns(3)[1]:
     st.image(logo_png)
@@ -14,6 +13,7 @@ df1 = pd.read_csv('SQL_HardWare.csv')
 
 st.title("AWMA configurator")
 
+### Base
 st.write("Step 1: Select type of door and size")
 col1, col2 = st.columns(2)
 
@@ -25,10 +25,6 @@ with col2:
 
 doorprice = door_prices[door_size][door_type]
 
-# st.write(f"Selected Door Type: {door_type}")
-# st.write(f"Selected Door Size: {door_size}")
-#st.write("Base Price:" + doorprice)
-
 st.divider()
 
 st.write("Step 2: Select Hinge Type")
@@ -36,9 +32,8 @@ hinge_type = st.radio("", ["Left hinge", "Right hinge"], horizontal = True)
 
 st.divider()
 
+# HW
 st.write("Step 3: Select hardware required")
-
-# gonna get ugly please don't puke when you read these:
 
 mandatory_flags = {}
 # currently hard-coded because there are no 'mandatory' labels in dataset
@@ -55,14 +50,11 @@ latch_to_latch_block = {
     }
 }
 
-### need review!!
 if door_type in door_prices[door_size]:
     # Retrieve filtered dataset based on door type
     HW_prices = getHWPrice(df1, door_type)
-    # total_price = float(doorprice.replace('$', '').replace(',', '').strip())
     total_price = doorprice['price']
 
-    # Put categories into orders, matching the order in macros
     ordered_categories = [
     "Mortice",
     "Latch Plate",
@@ -88,16 +80,13 @@ if door_type in door_prices[door_size]:
                 # Get the paired latch block based on the door type
                 paired_block = latch_to_latch_block[door_type][selected_latch]
                 
-                # Create a selection box but only show the paired block as the sole option
                 st.selectbox("Paired Latch Block:", [paired_block])
                 
                 # Update price for the corresponding latch block
                 if paired_block != "None Required" and paired_block in HW_prices["Custom Latch Block"]:
                     category_dict = HW_prices.get(category, {})
                     price = category_dict.get(selected_item, 0)
-                    #price = HW_prices["Custom Latch Block"][paired_block]
                     total_price += price['price']
-                    # st.write(f"Price for {paired_block}: ${price:.2f}")
 
         # update mandatory field flag
         if category in mandatory_categories:
@@ -106,12 +95,9 @@ if door_type in door_prices[door_size]:
             mandatory_flags[category] = price != 0
         # append price
         if selected_item != None:
-            # price_str = HW_prices[category][selected_item].strip().replace('$', '').replace(',', '')
             category_dict = HW_prices.get(category, {})
             price = category_dict.get(selected_item, 0)
-            #price = HW_prices[category][selected_item]
             total_price += price['price']
-            #st.write(f"Price for {selected_item}: ${price:.2f}")
     
     
 
@@ -119,12 +105,9 @@ st.divider()
 # check flag
 all_mandatory_filled = all(mandatory_flags.values())
 
-# total_price = float(total_price)
-# only print total price if all mandatory fields are filled
 if all_mandatory_filled:
     st.write(f"### Total Price: ${total_price:.2f}")
 else:
     st.write("### Please complete all mandatory selections to see the total price.")
 
-holder = ["Mortice:","Latch Plate:","Custom Latch Block:", "Exterior Plate/ Handle:", "Interior Plate/ Handle:", "Additional Hardware:"]
 
