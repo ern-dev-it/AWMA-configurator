@@ -4,7 +4,10 @@ import streamlit as st
 from data_processing import getBasePrice, getHWPrice
 
 logo_png = "Erntec_Pos_RGB.png"
-st.logo(logo_png, size = "large")
+# st.logo(logo_png, size = "large")
+
+with st.columns(3)[1]:
+    st.image(logo_png)
 
 df = pd.read_csv('SQL_Base.csv')
 df1 = pd.read_csv('SQL_HardWare.csv')
