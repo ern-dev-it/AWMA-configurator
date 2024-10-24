@@ -25,6 +25,8 @@ with col2:
 
 doorprice = door_prices[door_size][door_type]
 
+st.write(f"Price for {door_type} door in {door_size}: ${doorprice['price']:.2f}")
+
 st.divider()
 
 st.write("Step 2: Select Hinge Type")
