@@ -36,7 +36,7 @@ with col2:
     door_size = st.selectbox("Select Door Size:", list(door_prices.keys()))
 
 doorprice = door_prices[door_size][door_type]
-st.write(f"DoorSizeID: {doorprice['id']}")
+# st.write(f"DoorSizeID: {doorprice['id']}")
 input_door = doorprice['id']
 
 #st.write(f"Price for {door_type} door in {door_size}: ${doorprice['price']:.2f}")
@@ -101,7 +101,7 @@ if door_type in door_prices[door_size]:
             price = category_dict.get(selected_item, 0)
 
             total_price += price['price']
-            st.write(f"HardwareID: {price['id']}")
+            # st.write(f"HardwareID: {price['id']}")
 
             if category not in hwid:
                 hwid[category] = []
@@ -125,7 +125,7 @@ if door_type in door_prices[door_size]:
 
                 block_data = HW_prices["Custom Latch Block"].get(paired_block, None)
                 if block_data:
-                    st.write(f"HardwareID: {block_data['id']}")
+                    # st.write(f"HardwareID: {block_data['id']}")
                     total_price += block_data['price']
                     
                     if "Custom Latch Block" not in hwid:
