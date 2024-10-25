@@ -35,7 +35,7 @@ doorprice = door_prices[door_size][door_type]
 st.divider()
 
 st.write("Step 2: Select Hinge Type")
-hinge_type = st.radio("", ["Left hinge", "Right hinge"], horizontal = True)
+hinge_type = st.radio("Select:", ["Left hinge", "Right hinge"], horizontal = True)
 
 st.divider()
 
