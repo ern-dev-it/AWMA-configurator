@@ -8,6 +8,9 @@ st.set_page_config(
     page_title="AWMA configurator",
     page_icon="🖥️"
 )
+with open("styles.css") as f:
+    css = f.read()
+    st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
 
 logo_png = "Erntec_Pos_RGB.png"
 
@@ -17,7 +20,7 @@ with st.columns(3)[1]:
 df = pd.read_csv('SQL_Base.csv')
 df1 = pd.read_csv('SQL_HardWare.csv')
 
-st.title("AWMA configurator")
+st.markdown('<p class="verdana-title">AWMA configurator</p>', unsafe_allow_html=True)
 
 columns=['DoorSizeID', 'Mortice', "Latch Plate", "Custom Latch Block",
     "Exterior Plate/Handle (Optional)",
@@ -142,9 +145,11 @@ st.divider()
 all_mandatory_filled = all(mandatory_flags.values())
 
 if all_mandatory_filled:
-    st.write(f"### Total Price: ${total_price:.3f}")
+    st.markdown(f"<p class='verdana-large'>Total Price: ${total_price:.3f}</p>", unsafe_allow_html=True)
+    # st.write(f"### Total Price: ${total_price:.3f}")
 else:
-    st.write("### Please complete all mandatory selections to see the total price.")
+    st.markdown('<p class="verdana-large">Please complete all mandatory selections to see the total price.</p>', unsafe_allow_html=True)
+    # st.write("### Please complete all mandatory selections to see the total price.")
 
 if st.button("Generate IDs"):
     st.session_state['table'] = [['' for _ in columns] for _ in range(initial_rows)]

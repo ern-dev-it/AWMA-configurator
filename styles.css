@@ -1,0 +1,43 @@
+/* Verdana Regular */
+@font-face {
+    font-family: 'Verdana';
+    src: url('https://github.com/ern-dev-it/AWMA-configurator/blob/main/verdana.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Verdana Bold */
+@font-face {
+    font-family: 'Verdana';
+    src: url('https://github.com/ern-dev-it/AWMA-configurator/blob/main/verdanab.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Verdana Italic */
+@font-face {
+    font-family: 'Verdana';
+    src: url('https://github.com/ern-dev-it/AWMA-configurator/blob/main/verdanai.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Verdana Bold Italic */
+@font-face {
+    font-family: 'VerdanaZ';
+    src: url('https://github.com/ern-dev-it/AWMA-configurator/blob/main/verdanaz.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+body, div, span, input, select, textarea, label {
+    font-family: 'Verdana', sans-serif !important;
+}
+
+/* Font size classes */
+.verdana-small { font-family: 'Verdana'; font-size: 14px; }
+.verdana-medium { font-family: 'Verdana'; font-size: 18px; }
+.verdana-large { font-family: 'Verdana'; font-weight: bold; font-size: 24px; }
+.verdana-title { font-family: 'Verdana'; font-weight: bold; font-size: 30px; }
+.verdana-italic { font-family: 'Verdana'; font-style: italic; font-size: 18px; }
+.verdana-spare { font-family: 'Verdana';font-weight: bold;font-style: italic; font-size: 18px; }
