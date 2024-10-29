@@ -41,7 +41,7 @@ df = pd.read_csv('SQL_Base.csv')
 df1 = pd.read_csv('SQL_HardWare.csv')
 
 st.markdown('<p class="verdana-title">AWMA configurator</p>', unsafe_allow_html=True)
-st.markdown('<hr class="custom-divider">', unsafe_allow_html=True)
+st.markdown('<div class="custom-divider"></div>', unsafe_allow_html=True)
 
 columns=['DoorSizeID', 'Mortice', "Latch Plate", "Custom Latch Block",
     "Exterior Plate/Handle (Optional)",

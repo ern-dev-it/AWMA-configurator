@@ -49,7 +49,9 @@ body, div, span, input, select, textarea, label {
     margin-bottom: 20px; /* Space below the container */
 }
 .custom-divider {
-    border-top: 3px solid #0BBBEF; /* Green color and 3px thickness */
+    border-top: 5px solid #0BBBEF; /* Green color and 3px thickness */
     margin-top: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    box-shadow: none;
+    border-radius: 0; 
 }
