@@ -4,23 +4,44 @@ import streamlit as st
 from data_processing import getBasePrice, getHWPrice
 from utils import update_table, update_table_by_key
 
+# custom page icon and page title in tab bar
 st.set_page_config(
     page_title="AWMA configurator",
-    page_icon="🖥️"
+    page_icon="🖥️",
+    # initial_sidebar_state="collapsed"
 )
+
+# type face
 with open("styles.css") as f:
     css = f.read()
     st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
 
+# Insert logo at the top of the page
 logo_png = "Erntec_Pos_RGB.png"
-
 with st.columns(3)[1]:
     st.image(logo_png)
 
+# Add notes inside the side bar
+with st.sidebar.container():
+        st.markdown('<p class="verdana-large">Notes:</p>', unsafe_allow_html=True)
+        st.write("""<div class="sidebar-container">
+                - Standard PAFD cost = size cost + standard hardware costs<br><br>
+                - Any request outside the standard sizes and/or hardware is considered custom & requires a custom price from ERNTEC<br><br>
+                - Standard hardware height is 1000mm from FFL<br><br>
+                - Standard flood protection height is 900mm from FFL<br><br>
+                - Standard sizes are based on australian standard door sizes<br><br>
+                - Current costs do not include: <br>
+                    <p style="text-indent: 30px;">
+                    - Profile or seal as these are free issued by AWMA<br></p>
+                    <p style="text-indent: 30px;">
+                    - Variation for Colour & Freight</p>""", unsafe_allow_html=True)
+
+###
 df = pd.read_csv('SQL_Base.csv')
 df1 = pd.read_csv('SQL_HardWare.csv')
 
 st.markdown('<p class="verdana-title">AWMA configurator</p>', unsafe_allow_html=True)
+st.markdown('<hr class="custom-divider">', unsafe_allow_html=True)
 
 columns=['DoorSizeID', 'Mortice', "Latch Plate", "Custom Latch Block",
     "Exterior Plate/Handle (Optional)",

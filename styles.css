@@ -41,3 +41,15 @@ body, div, span, input, select, textarea, label {
 .verdana-title { font-family: 'Verdana'; font-weight: bold; font-size: 30px; }
 .verdana-italic { font-family: 'Verdana'; font-style: italic; font-size: 18px; }
 .verdana-spare { font-family: 'Verdana';font-weight: bold;font-style: italic; font-size: 18px; }
+.sidebar-container {
+    background-color: #f0f0f0; /* Light grey background */
+    border: 2px solid #DADA00; /* Green border */
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below the container */
+}
+.custom-divider {
+    border-top: 3px solid #0BBBEF; /* Green color and 3px thickness */
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
