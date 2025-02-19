@@ -8,7 +8,7 @@ from utils import update_table, update_table_by_key
 st.set_page_config(
     page_title="AWMA configurator",
     page_icon="🖥️",
-    initial_sidebar_state="collapsed"
+    ##initial_sidebar_state="collapsed"
 )
 
 # type face
@@ -123,7 +123,7 @@ st.divider()
 all_mandatory_filled = all(mandatory_flags.values())
 
 if all_mandatory_filled:
-    st.markdown(f"<p class='verdana-large'>Total Price: ${total_price:.3f}</p>", unsafe_allow_html=True)
+    st.markdown(f"<p class='verdana-large'>Total Price: ${total_price:.2f}</p>", unsafe_allow_html=True)
     # st.write(f"### Total Price: ${total_price:.3f}")
 else:
     st.markdown('<p class="verdana-large">Please complete all mandatory selections to see the total price.</p>', unsafe_allow_html=True)
