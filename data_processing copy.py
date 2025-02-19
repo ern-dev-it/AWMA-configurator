@@ -1,7 +1,7 @@
 import pandas as pd
 
 df = pd.read_csv('doorbase.csv')
-df1 = pd.read_csv('hardwareprice.csv')
+df1 = pd.read_csv('SQL_HardWare.csv')
 
 def convert_currency(value):
     return float(value.replace('$', '').replace(',', ''))
@@ -20,6 +20,7 @@ def cleanHWPriceData(df):
     rename_mapping = {
         "Mortice Locks": "Mortice",
         "Latch": "Latch Plate",
+        "Machine Block": "Custom Latch Block",
         "Exterior handles": "Exterior Plate/Handle (Optional)",
         "Interior handles": "Interior Plate/Handle",
         "Additional Hardware": "Additional Hardware (Optional)"
@@ -78,7 +79,8 @@ def getHWPrice(df, door_type):
 test = getBasePrice(df)
 print("Here's the output of getBasePrice")
 print(test)
-'''
+
 test2 = getHWPrice(df1, 1)
 print("Here's the output of getHWPrice")
 print(test2)
+'''

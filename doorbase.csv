@@ -1,0 +1,49 @@
+DoorSizeID,Size,Description,MU,UnitFixedCost,UnitVariableCost,TotalPAFDCost,UnitSellToAWMA,DateEntered,Width,Height,Thickness,ThicknessType,StartDate,EndDate
+1,2097 x 834,"Door, Assembly, 2097 x 834mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1224.51,5947.09,10110.05,12/10/2023,834,2097,64,Fully Sealed,NULL,NULL
+2,2177 x 834,"Door, Assembly, 2177 x 834mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1238.82,5961.40,10134.39,12/10/2023,834,2177,64,Fully Sealed,NULL,NULL
+3,2397 x 834,"Door, Assembly, 2397 x 834mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1530.87,6253.45,10630.87,12/10/2023,834,2397,64,Fully Sealed,NULL,NULL
+4,2097 x 884,"Door, Assembly, 2097 x 884mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1246.22,5968.80,10146.95,12/10/2023,884,2097,64,Fully Sealed,NULL,NULL
+5,2177 x 884,"Door, Assembly, 2177 x 884mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1260.53,5983.11,10171.29,12/10/2023,884,2177,64,Fully Sealed,NULL,NULL
+6,2397 x 884,"Door, Assembly, 2397 x 884mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1552.58,6275.16,10667.77,12/10/2023,884,2397,64,Fully Sealed,NULL,NULL
+7,2097 x 934,"Door, Assembly, 2097 x 934mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1267.92,5990.50,10183.86,12/10/2023,934,2097,64,Fully Sealed,NULL,NULL
+8,2177 x 934,"Door, Assembly, 2177 x 934mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1282.24,6004.82,10208.19,12/10/2023,934,2177,64,Fully Sealed,NULL,NULL
+9,2397 x 934,"Door, Assembly, 2397 x 934mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1574.29,6296.87,10704.67,12/10/2023,934,2397,64,Fully Sealed,NULL,NULL
+10,2097 x 984,"Door, Assembly, 2097 x 984mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1289.63,6012.21,10220.76,12/10/2023,984,2097,64,Fully Sealed,NULL,NULL
+11,2177 x 984,"Door, Assembly, 2177 x 984mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1303.94,6026.52,10245.09,12/10/2023,984,2177,64,Fully Sealed,NULL,NULL
+12,2397 x 984,"Door, Assembly, 2397 x 984mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1595.99,6318.57,10741.57,12/10/2023,984,2397,64,Fully Sealed,NULL,NULL
+13,2097 x 1034,"Door, Assembly, 2097 x 1034mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1311.34,6033.92,10257.66,12/10/2023,1034,2097,64,Fully Sealed,NULL,NULL
+14,2177 x 1034,"Door, Assembly, 2177 x 1034mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1325.65,6048.23,10281.99,12/10/2023,1034,2177,64,Fully Sealed,NULL,NULL
+15,2397 x 1034,"Door, Assembly, 2397 x 1034mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1617.70,6340.28,10778.48,12/10/2023,1034,2397,64,Fully Sealed,NULL,NULL
+16,2097 x 1134,"Door, Assembly, 2097 x 1134mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1354.75,6077.33,10331.46,12/10/2023,1134,2097,64,Fully Sealed,NULL,NULL
+17,2177 x 1134,"Door, Assembly, 2177 x 1134mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1369.06,6091.64,10355.79,12/10/2023,1134,2177,64,Fully Sealed,NULL,NULL
+18,2397 x 1134,"Door, Assembly, 2397 x 1134mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1661.11,6383.69,10852.28,12/10/2023,1134,2397,64,Fully Sealed,NULL,NULL
+19,2097 x 1314,"Door, Assembly, 2097 x 1314mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1685.58,6408.16,10893.87,12/10/2023,1314,2097,64,Fully Sealed,NULL,NULL
+20,2177 x 1314,"Door, Assembly, 2177 x 1314mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1699.89,6422.47,10918.21,12/10/2023,1314,2177,64,Fully Sealed,NULL,NULL
+21,2397 x 1314,"Door, Assembly, 2397 x 1314mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1739.25,6461.83,10985.12,12/10/2023,1314,2397,64,Fully Sealed,NULL,NULL
+22,2097 x 1400,"Door, Assembly, 2097 x 1400mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1722.92,6445.50,10957.34,12/10/2023,1400,2097,64,Fully Sealed,NULL,NULL
+23,2177 x 1400,"Door, Assembly, 2177 x 1400mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1737.23,6459.81,10981.67,12/10/2023,1400,2177,64,Fully Sealed,NULL,NULL
+24,2397 x 1400,"Door, Assembly, 2397 x 1400mm (H x W), Personal Access Flood Door (PAFD), Fully Sealed",1.7,4722.58,1776.59,6499.17,11048.59,12/10/2023,1400,2397,64,Fully Sealed,NULL,NULL
+25,2097 x 834,"Door, Assembly, 2097 x 834mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,908.12,4945.96,8408.13,12/10/2023,834,2097,37,Standard,NULL,NULL
+26,2177 x 834,"Door, Assembly, 2177 x 834mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,918.72,4956.56,8426.15,12/10/2023,834,2177,37,Standard,NULL,NULL
+27,2397 x 834,"Door, Assembly, 2397 x 834mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,1183.25,5221.09,8875.86,12/10/2023,834,2397,37,Standard,NULL,NULL
+28,2097 x 884,"Door, Assembly, 2097 x 884mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,920.22,4958.06,8428.71,12/10/2023,884,2097,37,Standard,NULL,NULL
+29,2177 x 884,"Door, Assembly, 2177 x 884mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,930.82,4968.66,8446.73,12/10/2023,884,2177,37,Standard,NULL,NULL
+30,2397 x 884,"Door, Assembly, 2397 x 884mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,1195.36,5233.20,8896.44,12/10/2023,884,2397,37,Standard,NULL,NULL
+31,2097 x 934,"Door, Assembly, 2097 x 934mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,932.33,4970.17,8449.29,12/10/2023,934,2097,37,Standard,NULL,NULL
+32,2177 x 934,"Door, Assembly, 2177 x 934mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,942.93,4980.77,8467.31,12/10/2023,934,2177,37,Standard,NULL,NULL
+33,2397 x 934,"Door, Assembly, 2397 x 934mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,1207.46,5245.30,8917.01,12/10/2023,934,2397,37,Standard,NULL,NULL
+34,2097 x 984,"Door, Assembly, 2097 x 984mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,944.43,4982.27,8469.86,12/10/2023,984,2097,37,Standard,NULL,NULL
+35,2177 x 984,"Door, Assembly, 2177 x 984mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,955.03,4992.87,8487.89,12/10/2023,984,2177,37,Standard,NULL,NULL
+36,2397 x 984,"Door, Assembly, 2397 x 984mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,1219.57,5257.41,8937.59,12/10/2023,984,2397,37,Standard,NULL,NULL
+37,2097 x 1034,"Door, Assembly, 2097 x 1034mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,956.54,4994.38,8490.44,12/10/2023,1034,2097,37,Standard,NULL,NULL
+38,2177 x 1034,"Door, Assembly, 2177 x 1034mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,967.14,5004.98,8508.46,12/10/2023,1034,2177,37,Standard,NULL,NULL
+39,2397 x 1034,"Door, Assembly, 2397 x 1034mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,1231.67,5269.51,8958.17,12/10/2023,1034,2397,37,Standard,NULL,NULL
+40,2097 x 1134,"Door, Assembly, 2097 x 1134mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,980.75,5018.59,8531.60,12/10/2023,1134,2097,37,Standard,NULL,NULL
+41,2177 x 1134,"Door, Assembly, 2177 x 1134mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,991.35,5029.19,8549.62,12/10/2023,1134,2177,37,Standard,NULL,NULL
+42,2397 x 1134,"Door, Assembly, 2397 x 1134mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,1255.88,5293.72,8999.33,12/10/2023,1134,2397,37,Standard,NULL,NULL
+43,2097 x 1314,"Door, Assembly, 2097 x 1314mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,1259.71,5297.55,9005.83,12/10/2023,1314,2097,37,Standard,NULL,NULL
+44,2177 x 1314,"Door, Assembly, 2177 x 1314mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,1270.31,5308.15,9023.85,12/10/2023,1314,2177,37,Standard,NULL,NULL
+45,2397 x 1314,"Door, Assembly, 2397 x 1314mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,1299.46,5337.30,9073.41,12/10/2023,1314,2397,37,Standard,NULL,NULL
+46,2097 x 1400,"Door, Assembly, 2097 x 1400mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,1280.53,5318.37,9041.22,12/10/2023,1400,2097,37,Standard,NULL,NULL
+47,2177 x 1400,"Door, Assembly, 2177 x 1400mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,1291.13,5328.97,9059.24,12/10/2023,1400,2177,37,Standard,NULL,NULL
+48,2397 x 1400,"Door, Assembly, 2397 x 1400mm (H x W), Personal Access Flood Door (PAFD), Standard",1.7,4037.84,1320.28,5358.12,9108.80,12/10/2023,1400,2397,37,Standard,NULL,NULL
