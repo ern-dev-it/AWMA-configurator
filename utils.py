@@ -1,6 +1,6 @@
 import streamlit as st
 
-columns=['DoorSizeID', 'Mortice', "Latch Plate", "Custom Latch Block",
+columns=['DoorSizeID', 'Mortice', "Latch Plate",
     "Exterior Plate/Handle (Optional)",
     "Interior Plate/Handle",
     "Additional Hardware (Optional)"]
