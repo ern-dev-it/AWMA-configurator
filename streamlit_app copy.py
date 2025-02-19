@@ -35,7 +35,7 @@ df1 = pd.read_csv('hardwareprice.csv')
 st.markdown('<p class="verdana-title">AWMA configurator</p>', unsafe_allow_html=True)
 st.markdown('<div class="custom-divider"></div>', unsafe_allow_html=True)
 
-columns=['DoorSizeID', 'Mortice', "Latch Plate",
+columns=['DoorSizeID', 'Mortice', "Latch Plate","Custom Latch Block",
     "Exterior Plate/Handle (Optional)",
     "Interior Plate/Handle",
     "Additional Hardware (Optional)"]
@@ -69,7 +69,18 @@ st.write("Step 3: Select hardware required")
 
 mandatory_flags = {}
 # currently hard-coded because there are no 'mandatory' labels in dataset
-mandatory_categories = ["Mortice", "Interior Plate/Handle", "Latch Plate"]
+mandatory_categories = ["Mortice", "Interior Plate/Handle", "Latch Plate", "Custom Latch Block"]
+
+latch_to_latch_block = {
+    "Standard": {
+        "Standard Erntec Latch": "No Block Required",
+        "Striker, Electric, 12-30Vdc, 25Kg Pre-Load, Multi-Function, No-Lip": "Block, Electric Latch, Machined, Dwg 853-541"
+    },
+    "Fully Sealed": {
+        "Standard Erntec Latch FS": "Block, Standard Latch FS, Machined, Dwg 853-471",
+        "Striker, Electric, 12-30Vdc, 25Kg Pre-Load, Multi-Function, No-Lip": "Block, Electric Latch FS, Machined, Dwg 853-555"
+    }
+}
 
 if door_type in door_prices[door_size]:
     # Retrieve filtered dataset based on door type
@@ -113,6 +124,31 @@ if door_type in door_prices[door_size]:
 
             if price['id']:  # Only append if the ID is not None
                 hwid[category].append(price['id'])
+
+
+        if category == "Latch Plate":
+            selected_latch = selected_item
+
+            if selected_latch in latch_to_latch_block[door_type]:
+                # Get the paired latch block based on the door type
+                paired_block = latch_to_latch_block[door_type][selected_latch]
+                
+                st.selectbox("Paired Latch Block:", [paired_block])
+                
+                # Update price for the corresponding latch block
+                
+                latch_data = HW_prices["Latch Plate"].get(selected_latch, None)
+
+                block_data = HW_prices["Custom Latch Block"].get(paired_block, None)
+                if block_data:
+                    # st.write(f"HardwareID: {block_data['id']}")
+                    total_price += block_data['price']
+                    
+                    if "Custom Latch Block" not in hwid:
+                        hwid["Custom Latch Block"] = []
+
+                    if block_data.get('id'):
+                        hwid["Custom Latch Block"].append(block_data['id'])
     
   
 
