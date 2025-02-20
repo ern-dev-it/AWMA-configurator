@@ -51,9 +51,8 @@ dataset2 = json.loads(st.secrets["dataset"]["data2"])
 df = pd.DataFrame(dataset1)
 df1 = pd.DataFrame(dataset2)
 
-st.markdown('<h1 class="verdana-large">AWMA configurator</h1>', unsafe_allow_html=True)
+
 st.markdown('<p class="verdana-title">AWMA configurator</p>', unsafe_allow_html=True)
-st.markdown('<p class="verdana-italic">AWMA configurator</p>', unsafe_allow_html=True)
 
 st.markdown('<div class="custom-divider"></div>', unsafe_allow_html=True)
 
