@@ -1,7 +1,16 @@
 import pandas as pd
+import json
 
+dataset1 = json.loads(st.secrets["dataset"]["data1"])
+dataset2 = json.loads(st.secrets["dataset"]["data2"])
+
+df = pd.DataFrame(dataset1)
+df1 = pd.DataFrame(dataset2)
+
+'''
 df = pd.read_csv('doorbase.csv')
 df1 = pd.read_csv('hardwareprice.csv')
+'''
 
 def convert_currency(value):
     return float(value.replace('$', '').replace(',', ''))

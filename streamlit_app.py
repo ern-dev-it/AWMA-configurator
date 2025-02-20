@@ -1,5 +1,6 @@
 import pandas as pd
 import streamlit as st
+import json
 
 from data_processing import getBasePrice, getHWPrice
 from utils import update_table, update_table_by_key
@@ -43,8 +44,17 @@ with st.sidebar.container():
                 - Cost variation for custom Powdercoat Colour & Freight may be applicable.""", unsafe_allow_html=True)
 
 ###
+
+dataset1 = json.loads(st.secrets["dataset"]["data1"])
+dataset2 = json.loads(st.secrets["dataset"]["data2"])
+
+df = pd.DataFrame(dataset1)
+df1 = pd.DataFrame(dataset2)
+
+'''
 df = pd.read_csv('doorbase.csv')
 df1 = pd.read_csv('hardwareprice.csv')
+'''
 
 st.markdown('<p class="verdana-title">AWMA configurator</p>', unsafe_allow_html=True)
 st.markdown('<div class="custom-divider"></div>', unsafe_allow_html=True)
