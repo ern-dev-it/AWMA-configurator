@@ -143,7 +143,11 @@ st.divider()
 all_mandatory_filled = all(mandatory_flags.values())
 
 if all_mandatory_filled:
-    st.markdown(f"<p class='verdana-large'>Total Price: ${total_price:.2f}</p>", unsafe_allow_html=True)
+    st.markdown(f"""
+    <p class='verdana-large'>Total Price: ${total_price:.2f} 
+    <span style='font-size: 15px; color: grey;'>+GST</span></p>
+    """, 
+    unsafe_allow_html=True)
     # st.write(f"### Total Price: ${total_price:.3f}")
 else:
     st.markdown('<p class="verdana-large">Please complete all mandatory selections to see the total price.</p>', unsafe_allow_html=True)
