@@ -11,6 +11,19 @@ st.set_page_config(
     ##initial_sidebar_state="collapsed"
 )
 
+st.markdown(
+    """
+    <style>
+    div[data-testid="stToolbarActionButton"] {
+        visibility: hidden;
+        display: none;
+    }
+    footer {visibility: hidden;}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # type face
 with open("styles.css") as f:
     css = f.read()

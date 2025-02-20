@@ -1,7 +1,7 @@
 [theme]
 base="light"
 primaryColor="#f7a600"
-
+showFooter = false
 
 
 [server]
