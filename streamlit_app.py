@@ -52,6 +52,9 @@ df = pd.DataFrame(dataset1)
 df1 = pd.DataFrame(dataset2)
 
 st.markdown('<p class="verdana-large">AWMA configurator</p>', unsafe_allow_html=True)
+st.markdown('<p class="verdana-title">AWMA configurator</p>', unsafe_allow_html=True)
+st.markdown('<p class="verdana-italic">AWMA configurator</p>', unsafe_allow_html=True)
+
 st.markdown('<div class="custom-divider"></div>', unsafe_allow_html=True)
 
 columns=['DoorSizeID', 'Mortice', "Latch Plate",
