@@ -41,7 +41,8 @@ with st.sidebar.container():
         st.write("""<div class="sidebar-container">
                 - Any request outside the standard sizes and/or hardware is considered custom & requires a price to be provided by ERNTEC<br><br>
                 - Standard handle height is 1000mm from floor level<br><br>
-                - Cost variation for custom Powdercoat Colour & Freight may be applicable.""", unsafe_allow_html=True)
+                - Cost variation for custom Powdercoat Colour & Freight may be applicable.<br><br>
+                - Price listed exclude GST.""", unsafe_allow_html=True)
 
 ###
 
