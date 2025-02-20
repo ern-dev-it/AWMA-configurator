@@ -20,6 +20,16 @@ st.markdown(
         display: none;
     }
     footer {visibility: hidden;}
+    .verdana-large {
+        font-family: 'Verdana';
+        font-weight: bold;
+        font-size: 24px;
+        }
+    .verdana-title {
+        font-family: 'Verdana';
+        font-weight: bold;
+        font-size: 34px;
+        }
     </style>
     """,
     unsafe_allow_html=True
