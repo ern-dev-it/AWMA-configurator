@@ -45,16 +45,13 @@ with st.sidebar.container():
 
 ###
 
-dataset1 = st.secrets["dataset"]["data1"]
-
-
-'''
 dataset1 = json.loads(st.secrets["dataset"]["data1"])
 dataset2 = json.loads(st.secrets["dataset"]["data2"])
 
 df = pd.DataFrame(dataset1)
 df1 = pd.DataFrame(dataset2)
 
+'''
 df = pd.read_csv('doorbase.csv')
 df1 = pd.read_csv('hardwareprice.csv')
 '''
