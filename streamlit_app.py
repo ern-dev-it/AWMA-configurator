@@ -7,7 +7,7 @@ from utils import update_table, update_table_by_key
 
 # custom page icon and page title in tab bar
 st.set_page_config(
-    page_title="AWMA configurator",
+    page_title="PAFD price configurator for AWMA Water Control Solutions",
     page_icon="🖥️",
     ##initial_sidebar_state="collapsed"
 )
