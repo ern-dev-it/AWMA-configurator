@@ -128,7 +128,7 @@ if door_type in door_prices[door_size]:
             price = category_dict.get(selected_item, 0)
 
             total_price += price['price']
-            # st.write(f"HardwareID: {price['id']}")
+            st.write(f"HardwareID: {price['price']}")
 
             if category not in hwid:
                 hwid[category] = []
