@@ -156,15 +156,15 @@ else:
     st.markdown('<p class="verdana-large">Please complete all mandatory selections to see the total price.</p>', unsafe_allow_html=True)
     # st.write("### Please complete all mandatory selections to see the total price.")
 
-'''
-if st.button("Generate IDs"):
-    st.session_state['table'] = [['' for _ in columns] for _ in range(initial_rows)]
-    update_table(0, 0, input_door)
-    # st.write(hwid)
-    for key, values in hwid.items():
+
+#if st.button("Generate IDs"):
+#    st.session_state['table'] = [['' for _ in columns] for _ in range(initial_rows)]
+#    update_table(0, 0, input_door)
+#    # st.write(hwid)
+#    for key, values in hwid.items():
         # Use the first value from the list (assuming there's only one per key)
-        update_table_by_key(0, key, values[0])
-    st.write("Part ID List Preview:")
-    st.table([columns] + st.session_state['table'])
-'''
+#        update_table_by_key(0, key, values[0])
+#    st.write("Part ID List Preview:")
+#    st.table([columns] + st.session_state['table'])
+
 
