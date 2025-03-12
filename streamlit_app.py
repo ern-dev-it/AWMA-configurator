@@ -53,7 +53,7 @@ df = pd.DataFrame(dataset1)
 df1 = pd.DataFrame(dataset2)
 
 
-st.markdown('<p class="verdana-title">PAFD price configurator for AWMA Water Control Solutions</p>', unsafe_allow_html=True)
+st.markdown('<p class="verdana-title">PAFD configurator for AWMA Water Control Solutions</p>', unsafe_allow_html=True)
 
 st.markdown('<div class="custom-divider"></div>', unsafe_allow_html=True)
 
