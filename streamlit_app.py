@@ -140,6 +140,8 @@ if door_type in door_prices[door_size]:
 
 st.divider()
 
+st.write("The prices listed are effective starting 13 March 2025 and will remain valid until 13 June 2025.")
+
 # check flag
 all_mandatory_filled = all(mandatory_flags.values())
 
