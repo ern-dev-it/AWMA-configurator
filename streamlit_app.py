@@ -43,6 +43,7 @@ with st.sidebar.container():
                 - Standard handle height is 1000mm from floor level<br><br>
                 - Cost variation for custom Powdercoat Colour & Freight may be applicable.<br><br>
                 - Price listed exclude GST.<br><br>
+                - Prices are subject to change without notice due to fluctuations in material costs, market conditions, and periodic pricing adjustments. We reserve the right to modify our selling prices to reflect current market realities.<br><br>
                 - Please verify the expiry date for pricing when using the configurator.""", unsafe_allow_html=True)
 
 ###
@@ -141,7 +142,7 @@ if door_type in door_prices[door_size]:
 
 st.divider()
 
-st.write("The prices listed are effective starting 13 March 2025 and will remain valid until 13 June 2025.")
+st.write("The prices listed are effective starting [TIMESTAMP1] and will remain valid until [TIMESTAMP2].")
 
 # check flag
 all_mandatory_filled = all(mandatory_flags.values())
